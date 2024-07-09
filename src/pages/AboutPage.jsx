@@ -1,18 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { styles } from "../styles";
+import { SectionWrapper } from "../hoc";
 import Hr from '../components/Hr';
 import MeAbout from "../assets/me2.jpeg";
+import Button from '../components/Button';
+import MainLayout from "../layouts/MainLayout";
 
 const AboutPage = () => {
   return (
-    <div className="relative w-full h-screen mx-auto overflow-hidden">
+    <MainLayout>
+    <section id="about" className="relative w-full h-screen mx-auto overflow-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-20 px-5 overflow-hidden">
         <div className="order-2 md:order-1 flex flex-col justify-center items-start text-start">
           <motion.p
             className={`${styles.sectionSubText}`}
             initial={{ y: -20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }} 
+            whileInView={{ y: 0, opacity: 1 }}   
             transition={{ delay: 0.1, type: "spring" }} 
           >
             INTRODUCTION
@@ -34,6 +39,15 @@ const AboutPage = () => {
           >
             A brief introduction about me, interests and achievements.
           </motion.p>
+          <motion.div
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, type: "spring" }}
+          >
+            <Button variation="primary">
+              <Link to="/about">Scroll Down</Link>
+            </Button>
+          </motion.div>
         </div>
 
         <div className="order-1 md:order-2 overflow-hidden">
@@ -51,8 +65,9 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
+    </MainLayout>
   );
 };
 
-export default AboutPage;
+export default SectionWrapper(AboutPage, "about");

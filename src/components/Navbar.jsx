@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
@@ -9,6 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const sectionRefs = useRef({});
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,35 +27,49 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
-      }
-    );
+    if (location.pathname === "/") {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActive(entry.target.id);
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.5,
+        }
+      );
 
-    navLinks.forEach((nav) => {
-      const section = document.getElementById(nav.id);
-      if (section) {
-        observer.observe(section);
-        sectionRefs.current[nav.id] = section;
-      }
-    });
-
-    return () => {
-      Object.values(sectionRefs.current).forEach((section) => {
-        observer.unobserve(section);
+      navLinks.forEach((nav) => {
+        const section = document.getElementById(nav.id);
+        if (section) {
+          observer.observe(section);
+          sectionRefs.current[nav.id] = section;
+        }
       });
-    };
-  }, []);
+
+      return () => {
+        Object.values(sectionRefs.current).forEach((section) => {
+          observer.unobserve(section);
+        });
+      };
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname === "/about") {
+      setActive("about");
+    } else if (location.pathname === "/projects") {
+      setActive("projects");
+    } else if (location.pathname === "/contact") {
+      setActive("contact");
+    } else if (location.pathname === "/") {
+      setActive("home");
+    }
+  }, [location.pathname]);
 
   return (
     <nav
@@ -106,7 +121,7 @@ const Navbar = () => {
                     setActive(nav.id);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <Link to={`/${nav.id === "home" ? "" : nav.id}`}>{nav.title}</Link>
                 </li>
               ))}
             </ul>

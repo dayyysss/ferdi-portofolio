@@ -15,7 +15,7 @@ const About = () => {
           <motion.p
             className={`${styles.sectionSubText}`}
             initial={{ y: -20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }} 
+            whileInView={{ y: 0, opacity: 1 }}   
             transition={{ delay: 0.1, type: "spring" }} 
           >
             INTRODUCTION

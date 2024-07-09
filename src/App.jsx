@@ -7,7 +7,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
+      <div className='relative z-0 bg-primary overflow-hidden'>
         <Routes>
           <Route path="/" element={
             <div>
@@ -24,8 +24,8 @@ const App = () => {
               </div>
             </div>
           } />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/about" element={<AboutPage />}/>
+          <Route path="/projects" element={ <ProjectPage />} />
         </Routes>
       </div>
     </BrowserRouter>
