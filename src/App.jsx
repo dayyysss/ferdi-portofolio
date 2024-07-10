@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar, Home, About, Projects, Contact, StarsCanvas, Footer } from "./components";
-import AboutPage from "./pages/AboutPage";
-import ProjectPage from "./pages/ProjectPage";
+import AboutPage from "./components/about/AboutPage";
+import ProjectPage from "./components/projects/ProjectPage";
 import ReactFullpage from '@fullpage/react-fullpage';
 
 const App = () => {

@@ -1,26 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import Hr from '../components/Hr';
-import MeAbout from "../assets/me2.jpeg";
-import MainLayout from "../layouts/MainLayout";
-import { SectionWrapper } from "../hoc";
-import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import { styles } from "../../styles";
+import Hr from '../Hr';
+import MeAbout from "../../assets/me2.jpeg";
+import Button from '../Button';
+import MainLayout from "../../layouts/MainLayout";
+import SectionWrapper from "../../hoc/SectionWrapper";
 
-const ProjectPage = () => {
+const AboutContent = () => { 
   return (
-    <MainLayout>
-    <section id="projects" className="relative w-full h-screen mx-auto overflow-hidden">
+    <div className="relative w-full h-screen mx-auto overflow-hidden max-w-7xl">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-20 px-5 overflow-hidden">
         <div className="order-2 md:order-1 flex flex-col justify-center items-start text-start">
-        <motion.p
+          <motion.p
             className={`${styles.sectionSubText}`}
             initial={{ y: -20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }} 
+            whileInView={{ y: 0, opacity: 1 }}   
             transition={{ delay: 0.1, type: "spring" }} 
           >
-            MY WORKS
+            INTRODUCTION
           </motion.p>
           <motion.h1
             className="bg-white lg:bg-transparent bg-opacity-50 px-3 md:px-0 text-4xl md:text-6xl font-bold"
@@ -28,7 +27,7 @@ const ProjectPage = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.1, type: "spring" }}
           >
-            My Projects.
+            About Me.
           </motion.h1>
           <Hr />
           <motion.p
@@ -37,7 +36,7 @@ const ProjectPage = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, type: "spring" }}
           >
-            These are some of the projects I have worked on.
+            A brief introduction about me, interests and achievements.
           </motion.p>
           <motion.div
             initial={{ y: 40, opacity: 0 }}
@@ -45,7 +44,7 @@ const ProjectPage = () => {
             transition={{ delay: 0.3, type: "spring" }}
           >
             <Button variation="primary">
-              <Link to="/projects">Scroll Down</Link>
+              <Link to="/about">Scroll Down</Link>
             </Button>
           </motion.div>
         </div>
@@ -65,9 +64,18 @@ const ProjectPage = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
+  );
+};
+
+const WrappedAboutContent = SectionWrapper(AboutContent, "about");
+
+const AboutPage = () => {
+  return (
+    <MainLayout>
+      <WrappedAboutContent />
     </MainLayout>
   );
 };
 
-export default SectionWrapper(ProjectPage, "projects");
+export default AboutPage;

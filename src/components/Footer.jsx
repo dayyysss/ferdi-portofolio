@@ -48,7 +48,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faGithub} className="text-xl" />
             </motion.a>
             <motion.a
-              href="https://www.instagram.com/ferdiansyah"
+              href="https://www.instagram.com/dayys7_"
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-tertiary w-10 h-10 rounded-2xl text-white hover:bg-gray-400 transition-all ease-in-out duration-300"
