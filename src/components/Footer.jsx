@@ -62,7 +62,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faInstagram} className="text-xl" />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/ferdiansyah"
+              href="https://www.linkedin.com/in/ferdiansyah-mauludin-91b29a2b9/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-tertiary w-10 h-10 rounded-2xl text-white hover:bg-gray-400 transition-all ease-in-out duration-300"
@@ -76,7 +76,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
             </motion.a>
             <motion.a
-              href="https://discordapp.com/users/daizzy#6"
+              href="https://discordapp.com/users/daiizzyy_"
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-tertiary w-10 h-10 rounded-2xl text-white hover:bg-gray-400 transition-all ease-in-out duration-300"

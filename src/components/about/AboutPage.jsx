@@ -62,7 +62,8 @@ const AboutContent = () => {
 
   return (
     <>
-      <section id="about" className="relative w-full h-screen mx-auto overflow-hidden">
+      {/* Start About */}
+      <section id="about" className="relative w-full h-screen mx-auto overflow-hidden mt-10">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-20 px-5 overflow-hidden">
           <div className="order-2 md:order-1 flex flex-col justify-center items-start text-start">
             <motion.p
@@ -101,10 +102,9 @@ const AboutContent = () => {
               </Button>
             </motion.div>
           </div>
-
           <div className="order-1 md:order-2 overflow-hidden">
             <motion.div
-              className="h-[300px] md:h-[550px] w-[300px] md:w-[400px] ml-0"
+              className="h-[300px] md:h-[550px] w-[300px] md:w-[400px] mr-5"
               initial={{ x: 300, opacity: 0, z: -100 }}
               whileInView={{ x: 0, opacity: 1, z: 0 }}
               transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
@@ -118,16 +118,24 @@ const AboutContent = () => {
           </div>
         </div>
       </section>
-      <Hr />
-      <section id="projects-section" className="relative w-full h-[200px] mx-auto overflow-hidden">
-        <motion.div variants={textVariant()}>
-          <h2 className={`${styles.sectionHeadText}`}>Who am I?</h2>
-        </motion.div>
+      {/* End About */}
+
+      {/* Start Who */}
+      <section id="about" className="relative w-full h-full mx-auto overflow-hidden mt-10">
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-20 px-5 overflow-hidden">
+          <motion.div variants={textVariant()}>
+            <Hr />
+            <h2 className={`${styles.sectionHeadText}`}>Who am I?</h2>
+          </motion.div>
+        </div>
       </section>
-      <section className="relative w-full h-screen mx-auto overflow-hidden flex flex-col md:flex-row items-center gap-10 md:gap-20 px-5">
+      {/* End Who */}
+
+      {/* Start Introduce */}
+      <section className="relative w-full h-full mx-auto overflow-hidden flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-5">
         <div className="order-1 overflow-hidden">
           <motion.div
-            className="h-[300px] md:h-[550px] w-[300px] md:w-[400px] ml-0"
+            className="h-[300px] md:h-[450px] w-[300px] md:w-[400px] flex justify-center items-center"
             initial={{ x: -300, opacity: 0, z: -100 }}
             whileInView={{ x: 0, opacity: 1, z: 0 }}
             transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
@@ -139,7 +147,7 @@ const AboutContent = () => {
             />
           </motion.div>
         </div>
-        <div className="order-2 flex flex-col justify-center items-start text-start">
+        <div className="order-2 flex flex-col justify-center items-start text-start max-w-lg md:ml-10">
           <motion.h1
             className="text-3xl font-bold"
             initial={{ x: -100, opacity: 0 }}
@@ -154,42 +162,52 @@ const AboutContent = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, type: "spring" }}
           >
-            Hello, I'm Ferdiansyah Mauludin, a technology enthusiast and Web aspirant
-            Developer. Originally from Bogor, West Java, Indonesia, I currently
-            started an amazing journey at Smkn 01 Ciomas, where I am currently learning about programming. My love for technology
-            and coding knows no boundaries. Outside the world of coding, I found myself
-            deepening in the fields of design, Game Development, and
-            the amazing world of AI. I believe that in today's fast-paced digital era
-            landscape, being a lifelong learner is not just a choice, but a necessity. Let's connect and explore this ever-evolving world of technology together!
+            Hello, I'm Ferdiansyah Mauludin, a technology enthusiast and aspiring Web Developer. Originally from Bogor, West Java, Indonesia, I am currently starting an extraordinary journey at Smkn 01 Ciomas, where I learn about programming. Outside of the world of coding, I delve into the fields of design and editing. I believe that in today's fast-paced digital era, being a lifelong learner is not just a choice, but a necessity. Let's connect and explore this ever-evolving world of technology together!
           </motion.p>
         </div>
       </section>
-      <section className="relative w-full h-[400px] mx-auto overflow-hidden">
-      <div className='flex flex-row flex-wrap justify-center gap-10'>
-      {technologies.map((technology) => (
-        <div className='w-28 h-28' key={technology.name}>
-          <BallCanvas icon={technology.icon} />
-        </div>
-      ))}
-    </div>
-      </section>
+      {/* End Introduce */}
+
+      {/* Start Tech */}
       <section className="relative w-full h-full mx-auto overflow-hidden">
-      <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-      >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Achievement.</h2>
+          <p className={`${styles.sectionSubText} text-center`}>
+            My Skills
+          </p>
+          <h2 className={`${styles.sectionHeadText} text-center`}>
+            Tech Stack & Tools.
+          </h2>
         </motion.div>
-      </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <SertiCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
-      </div>
-    </div>
+
+        <div className='flex flex-row flex-wrap justify-center gap-10'>
+          {technologies.map((technology) => (
+            <div className='w-28 h-28' key={technology.name}>
+              <BallCanvas icon={technology.icon} />
+            </div>
+          ))}
+        </div>
       </section>
+      {/* End Tech */}
+
+      {/* Start Achievement */}
+      {/* <section className="relative w-full h-full mx-auto overflow-hidden">
+        <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+          <div
+            className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+          >
+            <motion.div variants={textVariant()}>
+              <p className={styles.sectionSubText}>What others say</p>
+              <h2 className={styles.sectionHeadText}>Achievement.</h2>
+            </motion.div>
+          </div>
+          <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+            {testimonials.map((testimonial, index) => (
+              <SertiCard key={testimonial.name} index={index} {...testimonial} />
+            ))}
+          </div>
+        </div>
+      </section> */}
+      {/* End Achievement */}
     </>
   );
 };
