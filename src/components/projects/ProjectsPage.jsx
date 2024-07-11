@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import Hr from '../Hr';
 import { Tilt } from "react-tilt";
-import MeAbout from "../../assets/me2.jpeg";
+import projectall from "../../assets/projectall.png";
 import Button from '../Button';
 import MainLayout from "../../layouts/MainLayout";
 import SectionWrapper from "../../hoc/SectionWrapper";
@@ -122,7 +122,7 @@ const ProjectsContent = () => {
               transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
             >
               <img
-                src={MeAbout}
+                src={projectall}
                 className="object-cover w-full h-full rounded-3xl grayscale hover:grayscale-0 transition-all duration-300"
                 alt="Ferdi"
               />

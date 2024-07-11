@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import Hr from './Hr';
-import MeAbout from "../assets/me2.jpeg";
+import projectAll from "../assets/projectall.png";
 import Button from './Button';
 
 const Projects = () => {
@@ -35,7 +35,7 @@ const Projects = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, type: "spring" }}
           >
-            These are some of the projects I have worked on.
+           These are some of the projects completed and in progress
           </motion.p>
           <motion.div
             className="text-white-100"
@@ -57,7 +57,7 @@ const Projects = () => {
             transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
           >
             <img
-              src={MeAbout}
+              src={projectAll}
               className="object-cover w-full h-full rounded-3xl grayscale hover:grayscale-0 transition-all duration-300"
               alt="Ferdi"
             />

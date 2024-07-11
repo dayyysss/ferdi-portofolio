@@ -65,7 +65,7 @@ const Home = () => {
                 type: "spring",
               }}
             >
-              A junior fullstack developer who currently focused on Web
+              A Junior Programmer Developer who currently focused on Web
               Development. Other than that, I also interested in UX/UI Design. I
               love to learn new things and always open to new opportunities.
             </motion.p>
