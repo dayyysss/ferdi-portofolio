@@ -57,7 +57,7 @@ const Home = () => {
               & Student
             </motion.h1>
             <motion.p
-              className={`${styles.heroSubText} text-white-100 text-xs md:text-sm mt-4`}
+              className={`${styles.heroSubText} text-xs md:text-sm mt-4`}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{

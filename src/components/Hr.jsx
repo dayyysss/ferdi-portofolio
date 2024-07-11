@@ -4,7 +4,7 @@ export default function Hr() {
 	return (
 		<div className="flex flex-col my-5 ">
 			<motion.div
-				className="bg-gray-700 w-20 h-1 rounded-full mb-2"
+				className="bg-gray-500 w-20 h-1 rounded-full mb-2"
 				initial={{
 					opacity: 0,
 					x: -45,
@@ -19,7 +19,7 @@ export default function Hr() {
 					type: "spring",
 				}}></motion.div>
 			<motion.div
-				className="bg-gray-700 w-20 h-1 rounded-full "
+				className="bg-gray-500 w-20 h-1 rounded-full "
 				initial={{
 					opacity: 0,
 					x: 150,

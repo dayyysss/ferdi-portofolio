@@ -21,7 +21,7 @@ const Projects = () => {
             MY WORKS
           </motion.p>
           <motion.h1
-            className="bg-white lg:bg-transparent bg-opacity-50 px-3 md:px-0 text-4xl md:text-6xl font-bold"
+            className={`${styles.sectionHeadText}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.1, type: "spring" }}
@@ -30,7 +30,7 @@ const Projects = () => {
           </motion.h1>
           <Hr />
           <motion.p
-            className="text-xl mt-4 tracking-wider text-white-100 leading-[1.7rem] mb-5"
+         className="text-xl mt-4 tracking-wider text-secondary leading-[1.7rem] mb-5"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, type: "spring" }}
@@ -38,6 +38,7 @@ const Projects = () => {
             These are some of the projects I have worked on.
           </motion.p>
           <motion.div
+            className="text-white-100"
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, type: "spring" }}
