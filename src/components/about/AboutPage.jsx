@@ -57,7 +57,7 @@ const AboutContent = () => {
   }, []);
 
   const handleScrollDown = () => {
-    document.getElementById('projects-section').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -121,7 +121,7 @@ const AboutContent = () => {
       {/* End About */}
 
       {/* Start Who */}
-      <section id="about" className="relative w-full h-full mx-auto overflow-hidden mt-10">
+      <section className="relative w-full h-[150px] mx-auto overflow-hidden mt-10">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-20 px-5 overflow-hidden">
           <motion.div variants={textVariant()}>
             <Hr />
@@ -132,7 +132,7 @@ const AboutContent = () => {
       {/* End Who */}
 
       {/* Start Introduce */}
-      <section className="relative w-full h-full mx-auto overflow-hidden flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-5">
+      <section id="about-section" className="relative w-full min-h-screen mx-auto overflow-hidden flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-5 mb-10 md:mb-20">
         <div className="order-1 overflow-hidden">
           <motion.div
             className="h-[300px] md:h-[450px] w-[300px] md:w-[400px] flex justify-center items-center"
@@ -142,7 +142,7 @@ const AboutContent = () => {
           >
             <img
               src={MeAbout}
-              className="object-cover w-full h-full rounded-3xl grayscale hover:grayscale-0 transition-all duration-300"
+              className="object-cover w-full h-full rounded-3xl grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
               alt="Ferdi"
             />
           </motion.div>
@@ -157,7 +157,7 @@ const AboutContent = () => {
             Ferdiansyah Mauludin
           </motion.h1>
           <motion.p
-            className="text-lg mt-4 tracking-wider text-secondary leading-[1.7rem]"
+            className="text-lg mt-4 tracking-wider text-secondary leading-[1.7rem] md:leading-[2rem]"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, type: "spring" }}
@@ -168,13 +168,14 @@ const AboutContent = () => {
       </section>
       {/* End Introduce */}
 
+
       {/* Start Tech */}
       <section className="relative w-full h-full mx-auto overflow-hidden">
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-center`}>
             My Skills
           </p>
-          <h2 className={`${styles.sectionHeadText} text-center`}>
+          <h2 className={`${styles.sectionHeadText} text-center mb-5`}>
             Tech Stack & Tools.
           </h2>
         </motion.div>
@@ -188,6 +189,7 @@ const AboutContent = () => {
         </div>
       </section>
       {/* End Tech */}
+
 
       {/* Start Achievement */}
       {/* <section className="relative w-full h-full mx-auto overflow-hidden">
