@@ -51,7 +51,7 @@ const About = () => {
 
         <div className="order-1 md:order-2 overflow-hidden">
           <motion.div
-            className="h-[300px] md:h-[550px] w-[300px] md:w-[400px] ml-0"
+            className="h-[300px] md:h-[550px] w-[300px] md:w-[400px] ml-0 mr-5"
             initial={{ x: 300, opacity: 0, z: -100 }}
             whileInView={{ x: 0, opacity: 1, z: 0 }}
             transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Navbar, Footer } from '../components';
+import { NavbarLayout, Footer } from '../components';
 
 const MainLayout = ({ children }) => {
   return (
     <div className='relative z-0 bg-primary items-center'>
-      <Navbar />
+      <NavbarLayout />
       {children}
       <Footer />
     </div>

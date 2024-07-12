@@ -4,6 +4,8 @@ import {
   html,
   css,
   reactjs,
+  arduino,
+  filmora,
   redux,
   tailwind,
   nodejs,
@@ -88,6 +90,10 @@ const technologies = [
   //   name: "Three JS",
   //   icon: threejs,
   // },
+    {
+    name: "arduino",
+    icon: arduino,
+  },
   {
     name: "git",
     icon: git,
@@ -99,6 +105,10 @@ const technologies = [
   {
     name: "canva",
     icon: canva,
+  },
+    {
+    name: "filmora",
+    icon: filmora,
   },
   // {
   //   name: "docker",

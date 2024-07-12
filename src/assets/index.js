@@ -19,6 +19,8 @@ import threejs from "./tech/threejs.svg";
 import canva from "./tech/canva.png"
 import vue from "./tech/vue.png"
 import laravel from "./tech/laravel.png"
+import arduino from "./tech/arduino.png"
+import filmora from "./tech/filmora.png"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -27,6 +29,8 @@ import tripguide from "./tripguide.png";
 export {
   logo,
   github,
+  arduino,
+  filmora,
   menu,
   close,
   css,
