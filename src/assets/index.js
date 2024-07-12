@@ -22,9 +22,10 @@ import laravel from "./tech/laravel.png"
 import arduino from "./tech/arduino.png"
 import filmora from "./tech/filmora.png"
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import daywedding from "./projects/daywedding.png";
+import azrilstoregamev1 from "./projects/azrilstoregame.v1.png";
+import skaniclibrary from "./projects/skaniclibrary.png";
+import villabunga from "./projects/villabunga.png";
 
 export {
   logo,
@@ -49,7 +50,8 @@ export {
   tailwind,
   typescript,
   threejs,
-  carrent,
-  jobit,
-  tripguide,
+  daywedding,
+  azrilstoregamev1,
+  skaniclibrary,
+  villabunga,
 };

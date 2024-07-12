@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import Hr from '../Hr';
@@ -65,6 +65,8 @@ const ProjectCard = ({
 );
 
 const ProjectsContent = () => {
+  const [visibleProjects, setVisibleProjects] = useState(4);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -73,10 +75,14 @@ const ProjectsContent = () => {
     document.getElementById('projects-section').scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleLearnMore = () => {
+    setVisibleProjects((prev) => prev + 4);
+  };
+
   return (
     <>
-      <section id="projects" className="relative w-full h-screen mx-auto overflow-hidden">
-        <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-20 px-5 overflow-hidden mt-10">
+      <section id="projects" className="relative w-full h-screen mx-auto">
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-20 px-5 mt-10">
           <div className="order-2 md:order-1 flex flex-col justify-center items-start text-start">
             <motion.p
               className={`${styles.sectionSubText}`}
@@ -114,7 +120,7 @@ const ProjectsContent = () => {
               </Button>
             </motion.div>
           </div>
-          <div className="order-1 md:order-2 overflow-hidden">
+          <div className="order-1 md:order-2">
             <motion.div
               className="h-[300px] md:h-[550px] w-[300px] md:w-[400px]"
               initial={{ x: 300, opacity: 0, z: -100 }}
@@ -131,7 +137,7 @@ const ProjectsContent = () => {
         </div>
       </section>
       <Hr />
-      <section id="projects-section" className="relative w-full h-screen mx-auto overflow-hidden">
+      <section id="projects-section" className="relative w-full py-10 mx-auto">
         <motion.div variants={textVariant()}>
           <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
         </motion.div>
@@ -149,8 +155,8 @@ const ProjectsContent = () => {
           </motion.p>
         </div>
 
-        <div className="mt-20 flex flex-wrap gap-7">
-          {projects.map((project, index) => (
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-7">
+          {projects.slice(0, visibleProjects).map((project, index) => (
             <ProjectCard key={`project-${index}`} index={index} {...project} />
           ))}
         </div>

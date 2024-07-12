@@ -1,25 +1,20 @@
 import {
   javascript,
-  typescript,
   html,
   css,
   reactjs,
   arduino,
   filmora,
-  redux,
   tailwind,
-  nodejs,
-  mongodb,
   git,
   canva,
   vue,
   laravel,
   figma,
-  docker,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  daywedding,
+  azrilstoregamev1,
+  skaniclibrary,
+  villabunga,
 } from "../assets";
 
 export const navLinks = [
@@ -54,10 +49,6 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
   {
     name: "React JS",
     icon: reactjs,
@@ -70,27 +61,11 @@ const technologies = [
     name: "Laravel",
     icon: laravel,
   },
-  // {
-  //   name: "Redux Toolkit",
-  //   icon: redux,
-  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  // {
-  //   name: "Node JS",
-  //   icon: nodejs,
-  // },
-  // {
-  //   name: "MongoDB",
-  //   icon: mongodb,
-  // },
-  // {
-  //   name: "Three JS",
-  //   icon: threejs,
-  // },
-    {
+  {
     name: "arduino",
     icon: arduino,
   },
@@ -106,14 +81,94 @@ const technologies = [
     name: "canva",
     icon: canva,
   },
-    {
+  {
     name: "filmora",
     icon: filmora,
   },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
+];
+
+const projects = [
+  {
+    name: "Skanic Library",
+    description:
+      "a web-based platform that allows users to search, borrow, return and manage fines and books, providing a convenient and efficient solution to their borrowing needs.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      { 
+        name: "laravel",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: skaniclibrary,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Azrilstoregame",
+    description:
+      "Web application that allows users to purchase online gaming needs such as top ups and others.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: azrilstoregamev1,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Villa Bunga",
+    description:
+      "Villa Bunga offers an online platform where users can explore, book and enjoy the facilities, providing a comfortable and luxurious stay.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sass",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: villabunga,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Day & Yoon Wedding",
+    description:
+      "An online invitation platform where guests can view the wedding schedule, RSVP, access ceremony and reception details, providing a seamless and personalized experience for celebrating the special day.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+    ],
+    image: daywedding,
+    source_code_link: "https://github.com/",
+  },
+  
 ];
 
 const testimonials = [
@@ -140,72 +195,6 @@ const testimonials = [
     designation: "CTO",
     company: "456 Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
-const projects = [
-  {
-    name: "Skanic Libary",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "laravel",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Azrilstoregame",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
   },
 ];
 
