@@ -107,7 +107,7 @@ const projects = [
       },
     ],
     image: skaniclibrary,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/dayyysss/sknc-library-frontend-new",
   },
   {
     name: "Azrilstoregame",
@@ -128,7 +128,7 @@ const projects = [
       },
     ],
     image: azrilstoregamev1,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/dayyysss/azrilstoregame",
   },
   {
     name: "Villa Bunga",
@@ -149,7 +149,7 @@ const projects = [
       },
     ],
     image: villabunga,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/dayyysss/villa-bunga",
   },
   {
     name: "Day & Yoon Wedding",
@@ -166,9 +166,8 @@ const projects = [
       },
     ],
     image: daywedding,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/dayyysss/day-wedding",
   },
-  
 ];
 
 const testimonials = [

@@ -7,6 +7,25 @@ import CanvasLoader from "../Loader";
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
 
+  // Periksa posisi di model GLTF
+  earth.scene.traverse((child) => {
+    if (child.isMesh) {
+      const positions = child.geometry.attributes.position.array;
+      let hasNaN = false;
+      for (let i = 0; i < positions.length; i++) {
+        if (isNaN(positions[i])) {
+          console.error(`NaN value found in Earth model at index ${i}`);
+          hasNaN = true;
+          positions[i] = 0; // Inisialisasi nilai default
+        }
+      }
+      if (hasNaN) {
+        child.geometry.attributes.position.needsUpdate = true;
+        console.error('NaN values were found in Earth model and replaced with 0.');
+      }
+    }
+  });
+
   return (
     <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
   );

@@ -13,12 +13,30 @@ import CanvasLoader from "../Loader";
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
+  const handleRef = (geom) => {
+    if (geom) {
+      const positions = geom.attributes.position.array;
+      let hasNaN = false;
+      for (let i = 0; i < positions.length; i++) {
+        if (isNaN(positions[i])) {
+          console.error(`NaN value found at index ${i}`);
+          hasNaN = true;
+          positions[i] = 0; // Inisialisasi nilai default
+        }
+      }
+      if (hasNaN) {
+        geom.attributes.position.needsUpdate = true;
+        console.error('NaN values were found and replaced with 0.');
+      }
+    }
+  };
+
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
+        <icosahedronGeometry args={[1, 1]} ref={handleRef} />
         <meshStandardMaterial
           color='#fff8eb'
           polygonOffset
@@ -36,6 +54,7 @@ const Ball = (props) => {
     </Float>
   );
 };
+
 
 const BallCanvas = ({ icon }) => {
   return (

@@ -13,22 +13,15 @@ import { github } from "../../assets";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => (
-  <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => (
+  <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="w-full sm:w-1/2 lg:w-1/3 p-2">
     <Tilt
       options={{
         max: 45,
         scale: 1,
         speed: 450,
       }}
-      className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+      className="bg-tertiary p-5 rounded-2xl w-full"
     >
       <div className="relative w-full h-[230px]">
         <img
@@ -73,10 +66,6 @@ const ProjectsContent = () => {
 
   const handleScrollDown = () => {
     document.getElementById('projects-section').scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleLearnMore = () => {
-    setVisibleProjects((prev) => prev + 4);
   };
 
   return (
@@ -137,6 +126,7 @@ const ProjectsContent = () => {
         </div>
       </section>
       <Hr />
+
       <section id="projects-section" className="relative w-full py-10 mx-auto">
         <motion.div variants={textVariant()}>
           <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
@@ -155,8 +145,8 @@ const ProjectsContent = () => {
           </motion.p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-7">
-          {projects.slice(0, visibleProjects).map((project, index) => (
+        <div className="mt-20 flex flex-wrap justify-center gap-7">
+          {projects.map((project, index) => (
             <ProjectCard key={`project-${index}`} index={index} {...project} />
           ))}
         </div>
