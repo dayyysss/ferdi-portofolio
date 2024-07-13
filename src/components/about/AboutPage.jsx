@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, React } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import { styles } from "../../styles";
