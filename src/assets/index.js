@@ -27,6 +27,14 @@ import azrilstoregamev1 from "./projects/azrilstoregame.v1.png";
 import skaniclibrary from "./projects/skaniclibrary.png";
 import villabunga from "./projects/villabunga.png";
 
+import serti1 from "./sertifikat/serti1.jpg"
+import serti2 from "./sertifikat/serti2.jpg"
+import serti3 from "./sertifikat/serti3.jpg"
+import serti4 from "./sertifikat/serti4.jpg"
+import serti5 from "./sertifikat/serti5.jpg"
+import serti6 from "./sertifikat/serti6.jpg"
+import serti7 from "./sertifikat/serti7.jpg"
+
 export {
   logo,
   github,
@@ -54,4 +62,11 @@ export {
   azrilstoregamev1,
   skaniclibrary,
   villabunga,
+  serti1,
+  serti2,
+  serti3,
+  serti4,
+  serti5,
+  serti6,
+  serti7,
 };

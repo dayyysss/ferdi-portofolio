@@ -15,6 +15,13 @@ import {
   azrilstoregamev1,
   skaniclibrary,
   villabunga,
+  serti1,
+  serti2,
+  serti3,
+  serti4,
+  serti5,
+  serti6,
+  serti7,
 } from "../assets";
 
 export const navLinks = [
@@ -172,13 +179,25 @@ const projects = [
 
 const certificate = [
   {
-    image: daywedding,
+    image: serti1,
   },
   {
-    image: villabunga,
+    image: serti2,
   },
   {
-    image: azrilstoregamev1,
+    image: serti3,
+  },
+  {
+    image: serti4,
+  },
+  {
+    image: serti5,
+  },
+  {
+    image: serti6,
+  },
+  {
+    image: serti7,
   },
 ];
 
