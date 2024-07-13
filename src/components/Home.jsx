@@ -23,7 +23,7 @@ const Home = () => {
           <motion.img
             src={me}
             alt="Profile"
-            className="md:hidden w-[200px] h-[200px] object-cover rounded-full grayscale hover:grayscale-0 transition-all ease duration-300 sm:w-[300px] sm:h-[300px]"
+            className="md:hidden w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] object-cover rounded-full grayscale hover:grayscale-0 transition-all ease duration-300"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.7, type: "spring" }}
@@ -31,7 +31,7 @@ const Home = () => {
 
           <div className="text-center md:text-left">
             <motion.h3
-              className={`${styles.heroHeadText} text-white text-lg md:text-xl mb-[25px] md:mb-1`}
+              className={`${styles.heroHeadText} text-white text-base sm:text-lg md:text-xl mb-4 md:mb-2`}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2, type: "spring" }}
@@ -39,7 +39,7 @@ const Home = () => {
               Hi, I'm <span className="text-[#915EFF]">Ferdi</span>
             </motion.h3>
             <motion.h1
-              className={`${styles.heroHeadText2} text-white text-xl md:text-2xl mt-[-30px] mb-[7px] md:mb-[-20px]`}
+              className={`${styles.heroHeadText2} text-white text-lg sm:text-xl md:text-2xl mt-[-20px] mb-2 md:mb-0`}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.3, type: "spring" }}
@@ -47,7 +47,7 @@ const Home = () => {
               Junior Programmer
             </motion.h1>
             <motion.h1
-              className={`${styles.heroHeadText2} text-white text-xl md:text-2xl mt-[-10px] mb-[-10px] md:mb-[-20px]`}
+              className={`${styles.heroHeadText2} text-white text-lg sm:text-xl md:text-2xl mt-[-10px] mb-2 md:mb-0`}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.3, type: "spring" }}
@@ -55,7 +55,7 @@ const Home = () => {
               & Student
             </motion.h1>
             <motion.p
-              className={`${styles.heroSubText} text-xs md:text-sm mt-4`}
+              className={`${styles.heroSubText} text-xs sm:text-sm md:text-base mt-4`}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.4, type: "spring" }}
@@ -63,13 +63,13 @@ const Home = () => {
               A Junior Programmer Developer who currently focused on Web Development. Other than that, I also interested in UX/UI Design. I love to learn new things and always open to new opportunities.
             </motion.p>
             <motion.div
-              className="flex flex-col md:flex-row mt-10 gap-4 md:gap-7"
+              className="flex flex-col sm:flex-row mt-8 sm:mt-10 gap-4 md:gap-7"
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
             >
               <Button variation="primary">
-                <a href="/docs/Ferdiansyah_Mauludin.pdf" download>Download CV</a>
+                <a href="/docs/ferdiansyah_mauludin.pdf" download>Download CV</a>
               </Button>
               <Button variation="secondary">
                 <a href="#contact">Contact Me</a>
@@ -80,7 +80,7 @@ const Home = () => {
           <motion.img
             src={me}
             alt="Profile"
-            className="hidden md:block w-[200px] h-[200px] md:w-[400px] md:h-[400px] object-cover rounded-full ml-0 md:ml-5 lg:px-12 grayscale hover:grayscale-0 transition-all ease duration-300 sm:w-[300px] sm:h-[300px]"
+            className="hidden md:block w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] object-cover rounded-full grayscale hover:grayscale-0 transition-all ease duration-300"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.7, type: "spring" }}
