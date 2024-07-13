@@ -14,6 +14,10 @@ import { BallCanvas } from "../canvas";
 import { technologies, certificate } from "../../constants";
 
 const AboutContent = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const handleScrollDown = () => {
     document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
   };
