@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import me from "../assets/me.jpeg";
 import Button from "./Button";
 import { styles } from "../styles";
+import resume from '../../public/docs/Ferdiansyah_Mauludin.pdf'
 
 const Home = () => {
   return (
@@ -69,7 +70,7 @@ const Home = () => {
               transition={{ delay: 0.5, type: "spring" }}
             >
               <Button variation="primary">
-                <a href="/docs/ferdiansyah_mauludin.pdf" download>Download CV</a>
+                <a href={resume} download="ferdiansyah-cv">Download CV</a>
               </Button>
               <Button variation="secondary">
                 <a href="#contact">Contact Me</a>

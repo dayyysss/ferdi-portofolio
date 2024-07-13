@@ -53,10 +53,10 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Vue JS",
-    icon: vue,
-  },
+  // {
+  //   name: "Vue JS",
+  //   icon: vue,
+  // },
   {
     name: "Laravel",
     icon: laravel,
@@ -65,14 +65,14 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "arduino",
-    icon: arduino,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
+  // {
+  //   name: "arduino",
+  //   icon: arduino,
+  // },
+  // {
+  //   name: "git",
+  //   icon: git,
+  // },
   {
     name: "figma",
     icon: figma,
@@ -170,20 +170,18 @@ const projects = [
   },
 ];
 
-const certificates = [
+const certificate = [
   {
-    image: "daywedding",
-    pdfLink: "path/to/certificate1.pdf",
+    image: daywedding,
   },
   {
-    image: "daywedding",
-    pdfLink: "path/to/certificate2.pdf",
+    image: villabunga,
   },
   {
-    image: "daywedding",
-    pdfLink: "path/to/certificate3.pdf",
+    image: azrilstoregamev1,
   },
 ];
 
 
-export { technologies, certificates, projects };
+
+export { technologies, certificate, projects };
