@@ -68,7 +68,9 @@ const Home = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
             >
-              <Button variation="primary">Download CV</Button>
+              <Button variation="primary">
+                <a href="/docs/Ferdiansyah_Mauludin.pdf" download>Download CV</a>
+              </Button>
               <Button variation="secondary">
                 <a href="#contact">Contact Me</a>
               </Button>

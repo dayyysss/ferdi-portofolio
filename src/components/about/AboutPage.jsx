@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import Slider from "react-slick";
 import { styles } from "../../styles";
 import Hr from '../Hr';
 import MeAbout from "../../assets/me2.jpeg";
@@ -12,41 +13,20 @@ import { fadeIn, textVariant } from "../../utils/motion";
 
 import { BallCanvas } from "../canvas";
 import { technologies } from "../../constants";
-import { testimonials } from "../../constants";
+import { certificates } from "../../constants";  // Import data certificates
 
-const SertiCard = ({
-  index,
-  testimonial,
-  name,
-  designation,
-  company,
-  image,
-}) => (
+const SertiCard = ({ index, image, pdfLink }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
+    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full cursor-pointer'
+    onClick={() => window.open(pdfLink, "_blank")}
   >
-    <p className='text-white font-black text-[48px]'>"</p>
-
     <div className='mt-1'>
-      <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
-
-      <div className='mt-7 flex justify-between items-center gap-1'>
-        <div className='flex-1 flex flex-col'>
-          <p className='text-white font-medium text-[16px]'>
-            <span className='blue-text-gradient'>@</span> {name}
-          </p>
-          <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
-          </p>
-        </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
-      </div>
+      <img
+        src={image}
+        alt={`certificate-${index}`}
+        className='w-full h-full object-cover rounded-3xl'
+      />
     </div>
   </motion.div>
 );
@@ -58,6 +38,17 @@ const AboutContent = () => {
 
   const handleScrollDown = () => {
     document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0',
+    adaptiveHeight: true,
   };
 
   return (
@@ -168,6 +159,29 @@ const AboutContent = () => {
       </section>
       {/* End Introduce */}
 
+      {/* Start Certificates */}
+      <section className="relative w-full min-h-screen mx-auto overflow-hidden">
+        <div className="mt-12 bg-black-100 rounded-[20px]">
+          <div className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[600px]`}>
+            <motion.div variants={textVariant()}>
+              <p className={styles.sectionSubText}>Achievements</p>
+              <h2 className={styles.sectionHeadText}>Certificates.</h2>
+            </motion.div>
+            <div className="mt-32">
+              <Slider {...settings}>
+                {certificates.map((certificate, index) => (
+                  <SertiCard
+                    key={`certificate-${index}`}
+                    index={index}
+                    {...certificate}
+                  />
+                ))}
+              </Slider>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Certificates */}
 
       {/* Start Tech */}
       <section className="relative w-full h-full mx-auto overflow-hidden">
@@ -175,12 +189,12 @@ const AboutContent = () => {
           <p className={`${styles.sectionSubText} text-center`}>
             My Skills
           </p>
-          <h2 className={`${styles.sectionHeadText} text-center mb-5`}>
-            Tech Stack & Tools.
+          <h2 className={`${styles.sectionHeadText} text-center`}>
+            Tech Stack.
           </h2>
         </motion.div>
 
-        <div className='flex flex-row flex-wrap justify-center gap-10'>
+        <div className='flex flex-row flex-wrap justify-center gap-10 mt-5'>
           {technologies.map((technology) => (
             <div className='w-28 h-28' key={technology.name}>
               <BallCanvas icon={technology.icon} />
@@ -190,26 +204,6 @@ const AboutContent = () => {
       </section>
       {/* End Tech */}
 
-
-      {/* Start Achievement */}
-      {/* <section className="relative w-full h-full mx-auto overflow-hidden">
-        <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-          <div
-            className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-          >
-            <motion.div variants={textVariant()}>
-              <p className={styles.sectionSubText}>What others say</p>
-              <h2 className={styles.sectionHeadText}>Achievement.</h2>
-            </motion.div>
-          </div>
-          <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-            {testimonials.map((testimonial, index) => (
-              <SertiCard key={testimonial.name} index={index} {...testimonial} />
-            ))}
-          </div>
-        </div>
-      </section> */}
-      {/* End Achievement */}
     </>
   );
 };
