@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faInstagram, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin, faDiscord, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -76,18 +76,18 @@ const Footer = () => {
               <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
             </motion.a>
             <motion.a
-              href="https://discordapp.com/users/daiizzyy_"
+              href="https://www.youtube.com/@ferdiansyahm69"
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-tertiary w-10 h-10 rounded-2xl text-white hover:bg-gray-400 transition-all ease-in-out duration-300"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                y: { delay: 0.5 },
-                opacity: { delay: 0.6 },
+                y: { delay: 0.4 },
+                opacity: { delay: 0.5 },
               }}
             >
-              <FontAwesomeIcon icon={faDiscord} className="text-xl" />
+              <FontAwesomeIcon icon={faYoutube} className="text-xl" />
             </motion.a>
           </div>
           <motion.p
