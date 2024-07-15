@@ -4,7 +4,6 @@ import AboutPage from "./components/about/AboutPage";
 import ProjectPage from "./components/projects/ProjectsPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ReactFullpage from '@fullpage/react-fullpage';
 
 const App = () => {
   return (
