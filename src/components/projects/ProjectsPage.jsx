@@ -58,8 +58,6 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 );
 
 const ProjectsContent = () => {
-  const [visibleProjects, setVisibleProjects] = useState(4);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faInstagram, faLinkedin, faDiscord, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
