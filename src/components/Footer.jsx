@@ -99,13 +99,10 @@ const Footer = () => {
               type: "spring",
             }}
           >
-            © 2024 Created by Ferdiansyah. All rights reserved.
+            © 2024 - Ferdiansyah
           </motion.p>
-          <motion.a
-            href="https://sketchfab.com/3d-models/stylized-planet-789725db86f547fc9163b00f302c3e70"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-500 text-xs mt-2 underline"
+          <motion.p
+            className="text-gray-500 text-xs mt-2"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
@@ -113,8 +110,8 @@ const Footer = () => {
               type: "spring",
             }}
           >
-            3D Model Credit: Stylized Planet by Sketchfab
-          </motion.a>
+            Credit Inspiration: <a href="https://github.com/adrianhajdin/project_3D_developer_portfolio" target="_blank" rel="noopener noreferrer" className="underline">Adrian Hajdin</a>
+          </motion.p>
         </div>
       </div>
     </section>
