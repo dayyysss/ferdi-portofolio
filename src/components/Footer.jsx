@@ -62,20 +62,6 @@ const Footer = () => {
               <FontAwesomeIcon icon={faInstagram} className="text-xl" />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/ferdiansyah-mauludin-91b29a2b9/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-center items-center bg-tertiary w-10 h-10 rounded-2xl text-white hover:bg-gray-400 transition-all ease-in-out duration-300"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                y: { delay: 0.4 },
-                opacity: { delay: 0.5 },
-              }}
-            >
-              <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
-            </motion.a>
-            <motion.a
               href="https://www.youtube.com/@ferdiansyahm69"
               target="_blank"
               rel="noopener noreferrer"
