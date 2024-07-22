@@ -101,8 +101,11 @@ const Footer = () => {
           >
             © 2024 - Ferdiansyah
           </motion.p>
-          <motion.p
-            className="text-gray-500 text-xs mt-2"
+          <motion.a
+            href="https://sketchfab.com/3d-models/stylized-planet-789725db86f547fc9163b00f302c3e70"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 text-xs mt-2 underline"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
@@ -110,8 +113,8 @@ const Footer = () => {
               type: "spring",
             }}
           >
-            Credit Inspiration: <a href="https://github.com/adrianhajdin/project_3D_developer_portfolio" target="_blank" rel="noopener noreferrer" className="underline">Adrian Hajdin</a>
-          </motion.p>
+            3D Model Credit: Stylized Planet by Sketchfab
+          </motion.a>
         </div>
       </div>
     </section>

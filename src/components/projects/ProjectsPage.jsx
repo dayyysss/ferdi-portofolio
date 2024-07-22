@@ -9,7 +9,7 @@ import MainLayout from "../../layouts/MainLayout";
 import SectionWrapper from "../../hoc/SectionWrapper";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { projects } from "../../constants";
-import { github } from "../../assets";
+import link from "../../assets/link.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -35,7 +35,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
           >
             <img
-              src={github}
+              src={link}
               alt="source code"
               className="w-1/2 h-1/2 object-contain"
             />
