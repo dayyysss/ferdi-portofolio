@@ -156,7 +156,7 @@ const projects = [
       },
     ],
     image: villabunga,
-    source_code_link: "https://villa-bunga.vercel.app/",
+    source_code_link: "https://github.com/dayyysss/villa-bunga",
   },
   {
     name: "Day & Yoon Wedding",
@@ -177,7 +177,7 @@ const projects = [
       },
     ],
     image: daywedding,
-    source_code_link: "https://day-wedding.vercel.app/",
+    source_code_link: "https://github.com/dayyysss/day-wedding",
   },
 ];
 
