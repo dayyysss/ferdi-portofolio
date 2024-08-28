@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { styles } from "../../styles";
 import Hr from '../Hr';
 import MeAbout from "../../assets/me2.jpeg";
+import MeAbout2 from "../../assets/me3.jpg";
 import Button from '../Button';
 import MainLayout from "../../layouts/MainLayout";
 import SectionWrapper from "../../hoc/SectionWrapper";
@@ -113,7 +114,7 @@ const AboutContent = () => {
             transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 20 }}
           >
             <img
-              src={MeAbout}
+              src={MeAbout2}
               className="object-cover w-full h-full rounded-3xl grayscale hover:grayscale-0 transition-all duration-300 flex-shrink-0"
               alt="Ferdi"
             />

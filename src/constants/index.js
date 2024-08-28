@@ -76,21 +76,13 @@ const technologies = [
   //   name: "arduino",
   //   icon: arduino,
   // },
-  // {
-  //   name: "git",
-  //   icon: git,
-  // },
+  {
+    name: "git",
+    icon: git,
+  },
   {
     name: "figma",
     icon: figma,
-  },
-  {
-    name: "canva",
-    icon: canva,
-  },
-  {
-    name: "filmora",
-    icon: filmora,
   },
 ];
 
