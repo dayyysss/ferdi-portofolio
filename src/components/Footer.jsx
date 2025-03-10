@@ -62,7 +62,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faInstagram} className="text-xl" />
             </motion.a>
             <motion.a
-              href="https://www.youtube.com/@ferdiansyahm69"
+              href="https://www.youtube.com/@ferdday7"
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-tertiary w-10 h-10 rounded-2xl text-white hover:bg-gray-400 transition-all ease-in-out duration-300"
