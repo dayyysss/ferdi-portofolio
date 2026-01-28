@@ -202,3 +202,12 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+.fp-watermark {
+  display: none !important;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #64ffda;
+}

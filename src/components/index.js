@@ -1,3 +1,4 @@
+export { default as FullPageWrapper } from '../layouts/FullPageWrapper';
 import { EarthCanvas, BallCanvas, StarsCanvas } from './canvas';
 import Navbar from "./Navbar";
 import NavbarLayout from "./NavbarLayout";
