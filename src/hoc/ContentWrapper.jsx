@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
-export const ContentWrapper = (Component) =>
+const ContentWrapper = (Component) =>
   function HOC() {
     return (
       <motion.div
@@ -16,3 +16,5 @@ export const ContentWrapper = (Component) =>
       </motion.div>
     );
   };
+
+export default ContentWrapper;

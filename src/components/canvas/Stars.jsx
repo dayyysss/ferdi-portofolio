@@ -12,7 +12,7 @@ const Stars = (props) => {
       if (isNaN(positions[i])) {
         console.error(`NaN value found in sphere positions at index ${i}`);
         hasNaN = true;
-        positions[i] = 0; // Inisialisasi nilai default
+        positions[i] = 0;
       }
     }
     if (hasNaN) {

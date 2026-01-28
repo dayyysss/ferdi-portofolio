@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
-import { ContentWrapper } from "../hoc/ContentWrapper";
+import ContentWrapper from "../hoc/ContentWrapper";
 import Hr from './Hr';
 import MeAbout from "../assets/me2.jpeg";
 import Button from './Button';
@@ -66,4 +66,4 @@ const About = () => {
   );
 };
 
-export default ContentWrapper(About); // ganti ini
+export default ContentWrapper(About); 
